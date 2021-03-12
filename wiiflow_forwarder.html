@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Autobooting Wiiflow</title>
+        <style type="text/css">
+            body {
+                margin: 40px auto;
+                max-width: 650px;
+                line-height: 1.6;
+                font-size: 18px;
+                color: #363636;
+                padding: 0 10px;
+                background-color: #EEEEEE;
+            }
+
+            h1,h2,h3 {
+                line-height: 1.2
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Installing/Autobooting Wiiflow via Priiloader</h1>
+        </header>
+        <p>WiiFlow is weird, it does not like to be directly launched by Priiloader.<br>
+            So you need to use a "forwarder dol" to load, which will then load the real thing.<br>
+            You can find the forwarder dol <a href="assets/static/apps_wiiflow_boot.dol">here</a><br>
+            Rename it to 'boot.dol', create a new folder in your 'apps' folder alongside your other homebrew, name it 'wiiflow_forwarder' and place the file you downloaded above in there.<br>
+            Now when you enter Priiloader, go to Load/Install File and select 'wiiflow_forwarder', it will now be installed and available to be used in launching from Priiloader or autobooting.<br>
+            The forwarder tries to load the path sd:/apps/wiiflow/boot.dol, if that's not there, it will try to load the same path from USB, the folder name <b>MUST</b> exactly match.<br><br>
+            <b>DO NOT ASK FOR SUPPORT FOR THIS FORWARDER UNLESS YOU HAVE VERIFIED EVER STEP ABOVE, I WILL BE VERY UPSET</b>
+        </p>
+    </body>
+</html>
