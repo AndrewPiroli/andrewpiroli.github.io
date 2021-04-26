@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>cIOS Offline Install</title>
+        <style type="text/css">
+            body {
+                margin: 40px auto;
+                max-width: 650px;
+                line-height: 1.6;
+                font-size: 18px;
+                color: #363636;
+                padding: 0 10px;
+                background-color: #EEEEEE;
+            }
+
+            h1,h2,h3 {
+                line-height: 1.2
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Install cIOS on a Wii with no internet connection</h2>
+        <p>The d2x installer needs to connect to Nintendo's update servers to get certain files in order to function.
+        </p>
+        <p>
+            If your Wii is not connected, you need to download the files manually. There is a PC program called <a href="http://wiibrew.org/wiki/NUS_Downloader">NUS Downloader</a> that can download the files,
+            it is a Windows program, but should work in mono/wine.
+        </p>
+        <ol>
+            <li>Open NUS Downloader</li>
+            <li>Click "Database", hover over "IOS"</li>
+            <li>Go to "IOS57" then click "v5918"</li>
+            <li>At the bottom of the program ensure "Pack WAD" is checked, and "Patch IOS" is unchecked.</li>
+            <li>Click "Start NUS Download"</li>
+            <li>Repeat the previous steps for IOS56 v5661 and IOS38 v4123</li>
+            <li>The WADs are saved in the "titles" folder in the same location NUS Downloader is saved, you may have to dig through mutliple subfolders to find all the WADs</li>
+        </ol>
+        <p>
+            Once you have the WADs, place them in the root of your SD card or USB storage device, whichever you use to hold homebrew. d2x installer will see them and use them automatically.
+        </p>
+        <p>
+            This WAD selection matches up with wii.guide's cIOS installation at the time of writing, if the recommended guide changes or you are deviating from the guide for some reason,
+            d2x installer will tell you the name of the WAD it wants, which includes the base IOS and revision. Simply follow the steps above with the base and revision needed.
+        </p>
+    </body>
+</html>
