@@ -19,30 +19,54 @@
                 line-height: 1.2
             }
         </style>
+        <style type="text/css">
+            .borderpls {
+                padding-left: 1.5%;
+                padding-right: 1.5%;
+                padding-top: 0.5%;
+                padding-bottom: 0.5%;
+                border-style: solid;
+                border-radius: 3%;
+                border-color: #363636;
+            }
+        </style>
     </head>
     <body>
         <h2>Install cIOS on a Wii with no internet connection</h2>
-        <p>The d2x installer needs to connect to Nintendo's update servers to get certain files in order to function.
+        <p>The d2x installer needs to connect to Nintendo's update servers to get certain files in order to function. If your Wii is not connected, you need to download the files using a PC.
         </p>
-        <p>
-            If your Wii is not connected, you need to download the files manually. There is a PC program called <a href="http://wiibrew.org/wiki/NUS_Downloader">NUS Downloader</a> that can download the files,
-            it is a Windows program, but should work in mono/wine.
-        </p>
-        <ol>
-            <li>Open NUS Downloader</li>
-            <li>Click "Database", hover over "IOS"</li>
-            <li>Go to "IOS57" then click "v5918"</li>
-            <li>At the bottom of the program ensure "Pack WAD" is checked, and "Patch IOS" is unchecked.</li>
-            <li>Click "Start NUS Download"</li>
-            <li>Repeat the previous steps for IOS56 v5661 and IOS38 v4123</li>
-            <li>The WADs are saved in the "titles" folder in the same location NUS Downloader is saved, you may have to dig through mutliple subfolders to find all the WADs</li>
-        </ol>
+        <div class="borderpls">
+            <h3>Method #1 - Automatic Download Script</h3>
+            <h4>Contributed by MethodOrMadness</h4>
+            <p>Download the zip containing the script <a href=assets/static/cios_offline_sharpii_method.zip>here</a>
+            </p>
+            <ol>
+                <li>Extract the files</li>
+                <li>Open the folder</li>
+                <li>Run "cios_offline.bat" by double clicking</li>
+                <li>Follow the on-screen instructions</li>
+                <li>When finished, you will see a folder "cios_base" with 3 WAD files.</li>
+            </ol>
+        </div>
+        &nbsp;
+        <div class="borderpls">
+            <h3>Method #2 - Manual Download</h3>
+            <ol>
+                <li>Download and open <a href="http://wiibrew.org/wiki/NUS_Downloader">NUS Downloader</a></li>
+                <li>Click "Database", hover over "IOS"</li>
+                <li>Go to "IOS57" then click "v5918"</li>
+                <li>At the bottom of the program ensure "Pack WAD" is checked, and "Patch IOS" is unchecked.</li>
+                <li>Click "Start NUS Download"</li>
+                <li>Repeat the previous steps for IOS56 v5661 and IOS38 v4123</li>
+                <li>The WADs are saved in the "titles" folder in the same location NUS Downloader is saved, you may have to dig through mutliple subfolders to find all the WADs</li>
+            </ol>
+        </div>
         <p>
             Once you have the WADs, place them in the root of your SD card or USB storage device, whichever you use to hold homebrew. d2x installer will see them and use them automatically.
         </p>
         <p>
             This WAD selection matches up with wii.guide's cIOS installation at the time of writing, if the recommended guide changes or you are deviating from the guide for some reason,
-            d2x installer will tell you the name of the WAD it wants, which includes the base IOS and revision. Simply follow the steps above with the base and revision needed.
+            d2x installer will tell you the name of the WAD it wants, which includes the base IOS and revision. Simply follow method #2 above with the base and revision needed.
         </p>
     </body>
 </html>
