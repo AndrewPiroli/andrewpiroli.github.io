@@ -3,9 +3,9 @@ body {
     max-width: 650px;
     line-height: 1.6;
     font-size: 18px;
-    color: #2c2c2c;
+    color: #EEEEEE;
     padding: 0 10px;
-    background-color: #EEEEEE;
+    background-color: #000000;
 }
 
 h1,h2,h3 {
@@ -19,5 +19,5 @@ h1,h2,h3 {
     padding-bottom: 0.5%;
     border-style: solid;
     border-radius: 3%;
-    border-color: #2c2c2c;
+    border-color: #EEEEEE;
 }
