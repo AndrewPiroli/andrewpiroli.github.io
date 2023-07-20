@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DVD Bouncing Logo</title>
+  <style>
+    html {
+         filter: invert(1);
+    }
+    body, html {
+      margin: 0;
+      overflow: hidden;
+      background-color: #ffffff;
+    }
+
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+
+  <script>
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+    ctx.filter = "invert(100%)";
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    const dvdLogo = new Image();
+    dvdLogo.src = "assets/static/dvd.svg";
+    let x = 100;
+    let y = 100;
+    let dx = 2;
+    let dy = 2;
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(dvdLogo, x, y, 100, 50);
+
+      if (x + dx > canvas.width - 100 || x + dx < 0) {
+        dx = -dx;
+      }
+
+      if (y + dy > canvas.height - 50 || y + dy < 0) {
+        dy = -dy;
+      }
+
+      x += dx;
+      y += dy;
+
+      requestAnimationFrame(draw);
+    }
+    window.addEventListener('resize', resizeCanvas);
+
+    dvdLogo.onload = () => {
+	    resizeCanvas();
+	    draw();
+    }
+  </script>
+</body>
+</html>
